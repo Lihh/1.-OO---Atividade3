@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Invoice.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        Invoice *i = [[Invoice alloc]initWithNumero:1 andDescricao:@"Caderno" andQtdeComprada:3 andPrecoUnit:10.0];
+        
+        [i verificaQtde];
+        [i verificaPreco];
+        [i getInvoiceAmount];
+        [i mostraStatus];
+
+        
     }
     return 0;
 }
